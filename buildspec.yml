@@ -6,7 +6,7 @@ phases:
       - ls -l
       - aws s3 cp ./lambda_function.zip s3://sandeep-lambda-pipeline/Lamdbacode/
       - aws cloudformation package --template-file samTemplate.yaml --s3-bucket sandeep-lambda-pipeline --output-template-file outputSamTemplate.yaml
-      - aws lambda update-function-code --function-name TestLambdafunction --s3-bucket sandeep-lambda-pipeline --s3-key Lamdbacode/lambda_function.zip --publish true
+      - aws lambda update-function-code --function-name TestLambdafunction --s3-bucket sandeep-lambda-pipeline --s3-key Lamdbacode/lambda_function.zip
 artifacts:
   type: zip
   files:
