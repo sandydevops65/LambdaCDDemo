@@ -4,7 +4,7 @@ phases:
     commands:
       - zip lambda_function.zip ./LambdaCode/lambda_function.py
       - ls -l
-      - aws s3 cp .lambda_function.zip s3://sandeep-lambda-pipeline/Lamdbacode/
+      - aws s3 cp ./lambda_function.zip s3://sandeep-lambda-pipeline/Lamdbacode/
       - aws cloudformation package --template-file samTemplate.yaml --s3-bucket sandeep-lambda-pipeline --output-template-file outputSamTemplate.yaml
 artifacts:
   type: zip
