@@ -10,6 +10,7 @@ Resources:
       CodeUri: s3://sandeep-lambda-pipeline/Lamdbacode/lambda_function.zip
       Description: 'Lambda function for CD Demo'
       MemorySize: 128
+      FunctionName: TestLambdafunction
       Timeout: 30
       Role: 'arn:aws:iam::238912681352:role/LambdaCDRole'
       Environment:
